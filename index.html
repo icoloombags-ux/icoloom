@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iColoom - The Minimalist Tote Bags</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for extreme minimalism and high-fashion typography */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+            letter-spacing: 0.1em; /* Enhanced letter spacing for style */
+        }
+        .header-link, .nav-link {
+            font-size: 10px; /* Smaller, minimalist font size */
+            padding: 8px 0;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .header-link:hover, .nav-link:hover {
+            color: #555555;
+        }
+        .hero-text-overlay {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for text box */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .uppercase-bold {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        /* Hide scrollbar for a cleaner look, common in fashion sites */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation Bar (Minimalist) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 px-4 sm:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Left Menu & Search -->
+            <div class="flex space-x-4 sm:space-x-6">
+                <div class="group relative">
+                    <span class="header-link uppercase-bold">MENU</span>
+                    <!-- Simple Dropdown Placeholder -->
+                    <div class="absolute top-full left-0 mt-2 p-3 bg-white border border-gray-200 shadow-lg hidden group-hover:block w-40">
+                        <a class="block py-1 nav-link" onclick="console.log('Navigated to: NEW IN')">NEW IN</a>
+                        <a class="block py-1 nav-link" onclick="console.log('Navigated to: SHOP ALL')">SHOP ALL</a>
+                        <a class="block py-1 nav-link" onclick="console.log('Navigated to: EDITORIAL')">EDITORIAL</a>
+                        <a class="block py-1 nav-link" onclick="console.log('Navigated to: ABOUT US')">ABOUT US</a>
+                    </div>
+                </div>
+                <span class="header-link uppercase-bold" onclick="console.log('Search functionality clicked')">SEARCH</span>
+            </div>
+
+            <!-- Logo (Centerpiece, Bold) -->
+            <h1 class="text-xl sm:text-2xl uppercase-bold tracking-widest cursor-pointer" onclick="window.scrollTo(0, 0);">iColoom</h1>
+
+            <!-- Right Icons (Cart & Account) -->
+            <div class="flex space-x-4 sm:space-x-6">
+                <span class="header-link uppercase-bold" onclick="console.log('Account clicked')">ACCOUNT</span>
+                <span class="header-link uppercase-bold" onclick="console.log('Cart clicked')">CART (0)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="mt-16">
+
+        <!-- 1. Hero Section (High Impact Full Screen Image) -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <!-- Placeholder Image URL for high fashion look -->
+            <img src="https://placehold.co/1920x1080/000000/F5F5F5?text=SUMMER+CANVAS+COLLECTION"
+                 alt="New Tote Bag Collection"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/000000/F5F5F5?text=High+Fashion+Tote+Bags';"
+            >
+
+            <!-- Centered Text Overlay (Minimalist CTA) -->
+            <div class="relative z-10 p-6 sm:p-10 text-center uppercase-bold text-black hero-text-overlay transition-all duration-500 hover:shadow-xl">
+                <h2 class="text-3xl sm:text-5xl mb-4 tracking-widest">
+                    THE CANVAS REVOLUTION
+                </h2>
+                <p class="text-sm sm:text-base mb-6">
+                    मिनिमलिस्ट डिज़ाइन, मैक्सिमम इम्पैक्ट
+                </p>
+                <button class="px-8 py-3 text-xs sm:text-sm bg-black text-white hover:bg-gray-800 transition duration-300 rounded-sm">
+                    SHOP NEW DROP
+                </button>
+            </div>
+        </section>
+
+        <!-- 2. Category Highlights / Editorial Grid -->
+        <section class="max-w-7xl mx-auto py-12 px-4 sm:px-8">
+            <h3 class="text-xl sm:text-2xl uppercase-bold text-center mb-10 border-b pb-4">
+                iColoom Collections
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Collection 1: The Minimalist -->
+                <div class="group relative overflow-hidden cursor-pointer" onclick="console.log('Navigated to: The Minimalist')">
+                    <img src="https://placehold.co/900x600/E5E5E5/000000?text=THE+MINIMALIST"
+                         alt="Minimalist Totes"
+                         class="w-full h-auto object-cover transition duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/900x600/E5E5E5/000000?text=MINIMALIST';"
+                    >
+                    <div class="absolute inset-0 bg-black bg-opacity-10 flex items-end p-6 transition duration-300 group-hover:bg-opacity-0">
+                        <p class="uppercase-bold text-white text-lg tracking-widest">THE MINIMALIST</p>
+                    </div>
+                </div>
+
+                <!-- Collection 2: Structured Canvas -->
+                <div class="group relative overflow-hidden cursor-pointer" onclick="console.log('Navigated to: Structured Canvas')">
+                    <img src="https://placehold.co/900x600/D0D0D0/000000?text=STRUCTURED+CANVAS"
+                         alt="Structured Canvas Bags"
+                         class="w-full h-auto object-cover transition duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/900x600/D0D0D0/000000?text=STRUCTURED';"
+                    >
+                    <div class="absolute inset-0 bg-black bg-opacity-10 flex items-end p-6 transition duration-300 group-hover:bg-opacity-0">
+                        <p class="uppercase-bold text-white text-lg tracking-widest">STRUCTURED CANVAS</p>
+                    </div>
+                </div>
+
+                <!-- Collection 3: Vegan Leather -->
+                <div class="group relative overflow-hidden cursor-pointer md:col-span-2 h-96" onclick="console.log('Navigated to: Vegan Leather')">
+                    <img src="https://placehold.co/1920x600/A0A0A0/000000?text=VEGAN+LEATHER+ACCENTS"
+                         alt="Vegan Leather Totes"
+                         class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/1920x600/A0A0A0/000000?text=LEATHER+ACCENTS';"
+                    >
+                    <div class="absolute inset-0 bg-black bg-opacity-10 flex items-end p-6 transition duration-300 group-hover:bg-opacity-0">
+                        <p class="uppercase-bold text-white text-2xl tracking-widest">VEGAN LEATHER ACCENTS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Featured Products List (Simplified Listing Page Look) -->
+        <section class="max-w-7xl mx-auto py-12 px-4 sm:px-8">
+            <h3 class="text-xl sm:text-2xl uppercase-bold text-center mb-10 border-b pb-4">
+                Featured Tote Bags
+            </h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+
+                <!-- Product 1 -->
+                <div class="text-center group cursor-pointer" onclick="console.log('View Product 1: Essential Black')">
+                    <img src="https://placehold.co/400x500/000000/FFFFFF?text=ESSENTIAL+BLACK"
+                         alt="Essential Black Tote"
+                         class="w-full h-auto object-cover mb-2 transition duration-300 group-hover:opacity-80 rounded-sm"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x500/000000/FFFFFF?text=P1';"
+                    >
+                    <p class="uppercase-bold text-xs">Essential Black</p>
+                    <p class="text-xs">₹ 1,999</p>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="text-center group cursor-pointer" onclick="console.log('View Product 2: Day Trip Linen')">
+                    <img src="https://placehold.co/400x500/F0E68C/000000?text=DAY+TRIP+LINEN"
+                         alt="Day Trip Linen Tote"
+                         class="w-full h-auto object-cover mb-2 transition duration-300 group-hover:opacity-80 rounded-sm"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x500/F0E68C/000000?text=P2';"
+                    >
+                    <p class="uppercase-bold text-xs">Day Trip Linen</p>
+                    <p class="text-xs">₹ 2,499</p>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="text-center group cursor-pointer" onclick="console.log('View Product 3: Logo Shopper')">
+                    <img src="https://placehold.co/400x500/FFFFFF/000000?text=LOGO+SHOPPER"
+                         alt="Logo Shopper Bag"
+                         class="w-full h-auto object-cover mb-2 transition duration-300 group-hover:opacity-80 rounded-sm border border-gray-100"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x500/FFFFFF/000000?text=P3';"
+                    >
+                    <p class="uppercase-bold text-xs">The Logo Shopper</p>
+                    <p class="text-xs">₹ 1,499</p>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="text-center group cursor-pointer" onclick="console.log('View Product 4: Graphic Print')">
+                    <img src="https://placehold.co/400x500/90EE90/000000?text=GRAPHIC+PRINT"
+                         alt="Graphic Print Tote"
+                         class="w-full h-auto object-cover mb-2 transition duration-300 group-hover:opacity-80 rounded-sm"
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x500/90EE90/000000?text=P4';"
+                    >
+                    <p class="uppercase-bold text-xs">The Bold Graphic</p>
+                    <p class="text-xs">₹ 2,999</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                 <button class="px-10 py-4 text-sm bg-white border border-black text-black hover:bg-black hover:text-white transition duration-300 rounded-sm uppercase-bold tracking-widest"
+                         onclick="console.log('Navigated to: Full Catalog')">
+                    VIEW FULL CATALOG
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Very Minimalist) -->
+    <footer class="bg-white border-t border-gray-100 mt-16 py-12 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+            <!-- Column 1: iColoom Info -->
+            <div>
+                <p class="uppercase-bold text-xs mb-3">ICOLOOM</p>
+                <a class="block text-xs mb-1 hover:text-gray-600" onclick="console.log('Navigated to: About')">ABOUT US</a>
+                <a class="block text-xs mb-1 hover:text-gray-600" onclick="console.log('Navigated to: Sustainability')">SUSTAINABILITY</a>
+                <a class="block text-xs mb-1 hover:text-gray-600" onclick="console.log('Navigated to: Careers')">CAREERS</a>
+            </div>
+
+            <!-- Column 2: Help & Support -->
+            <div>
+                <p class="uppercase-bold text-xs mb-3">HELP</p>
+                <a class="block text-xs mb-1 hover:text-gray-600" onclick="console.log('Navigated to: Customer Service')">CUSTOMER SERVICE</a>
+                <a class="block text-xs mb-1 hover:text-gray-600" onclick="console.log('Navigated to: My Orders')">MY ORDERS</a>
+                <a class="block text-xs mb-1 hover:text-gray-600" onclick="console.log('Navigated to: Returns')">RETURNS & REFUNDS</a>
+            </div>
+
+            <!-- Column 3: Follow Us -->
+            <div>
+                <p class="uppercase-bold text-xs mb-3">FOLLOW US</p>
+                <a class="block text-xs mb-1 hover:text-gray-600" href="#">INSTAGRAM</a>
+                <a class="block text-xs mb-1 hover:text-gray-600" href="#">PINTEREST</a>
+                <a class="block text-xs mb-1 hover:text-gray-600" href="#">FACEBOOK</a>
+            </div>
+
+            <!-- Column 4: Newsletter -->
+            <div class="col-span-2 md:col-span-1">
+                <p class="uppercase-bold text-xs mb-3">JOIN THE NEWSLETTER</p>
+                <input type="email" placeholder="YOUR EMAIL ADDRESS" class="w-full text-xs p-2 border border-black focus:outline-none mb-2 rounded-sm" />
+                <button class="w-full text-xs py-2 bg-black text-white uppercase-bold hover:bg-gray-800 transition duration-300 rounded-sm" onclick="console.log('Newsletter signed up')">SUBSCRIBE</button>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 pt-6 border-t border-gray-100">
+            <p class="text-xs uppercase-bold tracking-widest">&copy; 2024 ICOLOOM. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
